@@ -1,0 +1,6 @@
+{
+  "name": "OptiWare AI - Warehouse Space & Material Optimization",
+  "description": "AI-driven warehouse slotting optimization engine using unsupervised K-Means velocity stratification and 3D physical constraint validation to reduce picker travel time by up to 40%.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

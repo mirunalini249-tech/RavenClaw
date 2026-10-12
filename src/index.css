@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* Pastel Aesthetic & Accessibility Tokens */
+:root {
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  
+  /* Light Theme White Canvas */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FAFAFC;
+  --bg-card: #FFFFFF;
+  --border-subtle: #E2E8F0;
+
+  /* Pastel Core Palette (Soft, high-contrast text for WCAG compliance) */
+  --pastel-mint-bg: #ECFDF5;
+  --pastel-mint-border: #A7F3D0;
+  --pastel-mint-text: #065F46;
+  --pastel-mint-accent: #10B981;
+
+  --pastel-peach-bg: #FFF7ED;
+  --pastel-peach-border: #FED7AA;
+  --pastel-peach-text: #9A3412;
+  --pastel-peach-accent: #F97316;
+
+  --pastel-lavender-bg: #F5F3FF;
+  --pastel-lavender-border: #DDD6FE;
+  --pastel-lavender-text: #5B21B6;
+  --pastel-lavender-accent: #8B5CF6;
+
+  --pastel-sky-bg: #F0F9FF;
+  --pastel-sky-border: #BAE6FD;
+  --pastel-sky-text: #075985;
+  --pastel-sky-accent: #0284C7;
+
+  --pastel-rose-bg: #FFF1F2;
+  --pastel-rose-border: #FECDD3;
+  --pastel-rose-text: #9F1239;
+  --pastel-rose-accent: #E11D48;
+
+  --pastel-butter-bg: #FEFCE8;
+  --pastel-butter-border: #FEF08A;
+  --pastel-butter-text: #854D0E;
+  --pastel-butter-accent: #CA8A04;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #0F172A;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accessible focus visible ring */
+*:focus-visible {
+  outline: 2px solid #6366f1 !important;
+  outline-offset: 2px !important;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Pastel Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* High contrast accessibility mode */
+.contrast-high {
+  --border-subtle: #94A3B8;
+}
+
+.contrast-high [class*="border-"] {
+  border-width: 1.5px !important;
+  border-color: #64748B !important;
+}
+
+.contrast-high [class*="text-slate-500"],
+.contrast-high [class*="text-slate-400"] {
+  color: #334155 !important;
+}
